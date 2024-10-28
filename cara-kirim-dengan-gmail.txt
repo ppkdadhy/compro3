@@ -1,0 +1,23 @@
+ATUR GMAILNYA:
+MASUK KE GMAIL ANDA > KLIK FOTO ANDA DIBAGIAN POJOK KANAN ATAS > KLIK KELOLA AKUN GOOGLE > KLIK KEAMANAN DI BAGIAN KIRI LAYAR ANDA > CARI DI MESIN PENCARIAN "sandi aplikasi" dan buat nama aplikasinya
+> setelah itu copy sandi aplikasinya > paste ke sini > auth_password=your-app-password  
+
+
+tapi sebelumnya buat verifikasi 2 langkah dulu
+
+File sendmail.ini:
+smtp_server=smtp.gmail.com
+smtp_port=587
+smtp_ssl=auto
+auth_username=your-email@gmail.com  // Ganti dengan email Gmail Anda
+auth_password=your-app-password     // Ganti dengan App Password yang sudah dibuat
+force_sender=your-email@gmail.com   // Ganti dengan email Gmail Anda
+
+File php.ini:
+[mail function]
+SMTP=smtp.gmail.com
+smtp_port=587
+sendmail_from = your-email@gmail.com
+sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+
+
